@@ -1,5 +1,5 @@
 # PartDB – Desktop Inventory Management System  
-_A Supabase-powered Electron Application for Managing Parts, Images, and Activity Logs_
+_A Supabase-powered Electron Application for Managing Parts, Images, and Activity Logs_ for shop floor parts
 
 ---
 
