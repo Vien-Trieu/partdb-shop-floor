@@ -45,7 +45,7 @@ const upload = multer({
 });
 
 /* === Server Port ======================================================== */
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 // === Helper: derive storage path from public URL & delete from bucket =======
 function extractStoragePathFromPublicUrl(imageUrl) {
@@ -74,7 +74,7 @@ async function deleteImageFromStorage(imageUrl) {
   if (!storagePath) {
     console.warn(
       "⚠️ No storage path derived from URL, skipping delete:",
-      imageUrl
+      imageUrl,
     );
     return;
   }
@@ -293,7 +293,7 @@ app.post("/upload-image", upload.single("file"), async (req, res) => {
       "/upload-image received file:",
       file.originalname,
       file.mimetype,
-      file.size
+      file.size,
     );
 
     const ext = path.extname(file.originalname) || "";

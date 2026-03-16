@@ -1,16 +1,18 @@
-# PartDB – Desktop Inventory Management System  
+# PartDB – Desktop Inventory Management System
+
 _A Supabase-powered Electron Application for Managing Parts, Images, and Activity Logs_ for shop floor parts
 
 ---
 
 ## 📌 Overview
+
 PartDB is a cross-platform desktop application designed for fast, offline-friendly part lookup and secure part management. It leverages:
 
-- **Electron** for the desktop runtime  
-- **React (Vite)** for the UI  
-- **Express.js** packaged with `pkg`  
-- **Supabase** for database and image storage  
-- **PIN-based access control** for sensitive operations  
+- **Electron** for the desktop runtime
+- **React (Vite)** for the UI
+- **Express.js** packaged with `pkg`
+- **Supabase** for database and image storage
+- **PIN-based access control** for sensitive operations
 
 The packaged product runs as a **single portable .exe** with a fully embedded backend.
 
@@ -19,46 +21,51 @@ The packaged product runs as a **single portable .exe** with a fully embedded ba
 ## ✨ Features
 
 ### 🔍 Part Search
-- Fast, optimized search  
-- Pagination and partial matching  
-- Detailed part view panel  
+
+- Fast, optimized search
+- Pagination and partial matching
+- Detailed part view panel
 
 ### 🖼️ Image Uploading
-- Upload PNG/JPG images to Supabase Storage (`part-images`)  
-- Replace images when editing parts  
-- Full integration with backend API  
+
+- Upload PNG/JPG images to Supabase Storage (`part-images`)
+- Replace images when editing parts
+- Full integration with backend API
 
 ### ➕ Add, Edit, Delete Parts
-- PIN-protected sensitive actions  
+
+- PIN-protected sensitive actions
 - Backend endpoints:
   - `POST /parts`
   - `PUT /parts/:id`
   - `DELETE /parts/:id`
-- All changes stored securely via Supabase  
+- All changes stored securely via Supabase
 
 ### 📝 Activity Logs
-- Logs add/edit/delete actions  
-- PIN-protected access  
-- Clean, structured recordkeeping  
+
+- Logs add/edit/delete actions
+- PIN-protected access
+- Clean, structured recordkeeping
 
 ### 🚀 Single Executable Deployment
-- Express backend compiled using **pkg**  
-- Electron loads backend automatically  
-- Runs entirely offline  
-- No Node.js required on client machines  
+
+- Express backend compiled using **pkg**
+- Electron loads backend automatically
+- Runs entirely offline
+- No Node.js required on client machines
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer        | Technology |
-|--------------|------------|
-| Frontend     | React (Vite), JSX, Tailwind CSS |
-| Backend      | Express.js (Node) compiled with `pkg` |
-| Database     | Supabase PostgreSQL |
-| Storage      | Supabase Storage (`part-images`) |
-| Desktop      | Electron |
-| Packaging    | `electron-builder`, `pkg` |
+| Layer     | Technology                            |
+| --------- | ------------------------------------- |
+| Frontend  | React (Vite), JSX, Tailwind CSS       |
+| Backend   | Express.js (Node) compiled with `pkg` |
+| Database  | Supabase PostgreSQL                   |
+| Storage   | Supabase Storage (`part-images`)      |
+| Desktop   | Electron                              |
+| Packaging | `electron-builder`, `pkg`             |
 
 ---
 
@@ -85,6 +92,7 @@ partdb/
 ## ⚙️ Development Setup
 
 ### Backend
+
 ```bash
 cd server
 node index.js
@@ -92,9 +100,11 @@ Frontend
 cd client
 npm run dev
 ```
+
 ```Electron (Dev Mode)
 npm run electron:dev
 ```
+
 ```📦 Packaging the Application
 1. Build Backend with pkg
 cd server
@@ -108,6 +118,7 @@ npm run electron:build
 
 Produces a fully self-contained .exe.
 ```
+
 ```🔐 Environment Variables
 
 env.production (loaded automatically in packaged mode):
@@ -117,6 +128,7 @@ SUPABASE_SERVICE_ROLE_KEY=(your supabase Service Role Key)
 SUPABASE_ANON_KEY=(your supabase anon key)
 NODE_TLS_REJECT_UNAUTHORIZED=0
 ```
+
 ```🗄️ Supabase Schema
 Key Tables
 
@@ -135,6 +147,7 @@ Storage Bucket
 
 part-images
 ```
+
 ```🔒 Access Control & RLS
 
 RLS enabled for secure data handling
@@ -145,10 +158,11 @@ Writes restricted to backend (service role key)
 
 All sensitive UI actions require a PIN
 ```
+
 ```🐞 Troubleshooting
 Search failing
 
-Ensure backend runs on http://127.0.0.1:3001
+Ensure backend runs on http://127.0.0.1:3002
 
 Confirm correct API base in frontend
 
@@ -160,6 +174,7 @@ Confirm bucket name: part-images
 
 Check backend logs for Supabase errors
 ```
+
 ```#📄 License – ABB Internal Use Only
 
 Copyright © 2025 ABB.
@@ -193,3 +208,4 @@ legitimate ABB operational use.
 
 © 2025 ABB. All rights reserved.
 ────────────────────────────────────────────────────────────
+```

@@ -23,7 +23,7 @@ import "./App.css";
 
 const API_BASE =
   (import.meta && import.meta.env && import.meta.env.VITE_API_BASE) ||
-  "http://127.0.0.1:3001";
+  "http://127.0.0.1:3002";
 
 /** Robust fetch with timeout, retry, and no-store cache (handles 204/empty bodies) */
 /** Faster default: 3s timeout, no retry */

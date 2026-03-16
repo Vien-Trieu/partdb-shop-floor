@@ -20,7 +20,8 @@ yarn-debug.log*
 yarn-error.log*
 
 # Environment
-.env
+client/.env.production
+server/env.production
 
 # Editor/OS junk
 .DS_Store
