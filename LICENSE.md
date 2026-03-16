@@ -1,6 +1,6 @@
 PartDB License Agreement
 
-Copyright © 2025 Vien Trieu
+Copyright © 2026 Vien Trieu
 
 This software is proprietary to ABB. All rights are reserved by the author unless explicitly stated otherwise in this document.
 
